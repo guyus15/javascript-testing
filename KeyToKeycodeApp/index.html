@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <div class="container">
+            <h1>Keycode</h1>
+            <p>Key</p>
+        </div>
+    </body>
+    <style>
+        .container{
+            font-family: Arial, Helvetica, sans-serif;
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 200px 100px;
+            grid-template-areas: 
+            '. h1 .'
+            '. p .';                
+            justify-items:center;
+            align-items: center;
+        }
+        h1{
+            grid-area:h1;
+            padding: 75px 150px 75px 150px;
+            border-style:solid;
+            border-width: 3px;
+            border-color:black;
+            border-radius: 10px;
+            background-color: darkslategrey;
+            color:white;
+        }
+        p{
+            grid-area:p;
+        }
+    </style>
+    <script>
+        h1 = document.querySelector("h1");
+        p = document.querySelector("p");
+
+        window.addEventListener("keydown",function(e){
+            if(e.key !== " "){
+                h1.textContent = e.keyCode;
+                p.textContent = e.key;
+            }
+            else{
+                h1.textContent =e.keyCode;
+                p.textContent ="Space";
+            }
+        });
+
+    </script>
+</html>

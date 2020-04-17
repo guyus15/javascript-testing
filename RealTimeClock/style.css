@@ -1,0 +1,40 @@
+:root{
+    --clock-diameter: 200px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.clock{
+    position:relative;
+    width:var(--clock-diameter);
+    height:var(--clock-diameter);
+    border-style:solid;
+    border-radius:50%;
+    border-color:black;
+    background-color:lightblue;
+}
+.hand{
+    top: calc(var(--clock-diameter)/2);
+    position: absolute;
+    width:calc(var(--clock-diameter)/2);
+    height:5px;
+    background-color: black;
+    transform-origin: 100%;
+    transition: all 0.1s;
+    border-radius:30px;
+}
+.second-hand{
+
+    height:2px;
+}
+
+p{
+    
+    font-size: 10px;
+    text-align: center;
+}
+

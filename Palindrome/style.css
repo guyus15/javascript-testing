@@ -1,0 +1,58 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+
+#container{
+    width:500px;
+    height:500px;
+    background-color: gray;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas:
+    '. . .' 
+    '. timer .'
+    '. change-time .'
+    '. inputs .';
+    justify-items:center;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+#timer{
+    grid-area:timer;
+    color:white;
+}
+
+#change-time-container{
+    grid-area:change-time;
+    align-self:center;
+    display:flex;
+    align-items:center;
+}
+
+.arrow{
+    display:grid;
+    background-color: white;
+    margin:10px;
+    height:20px;
+    width:20px;
+    border-radius:50%;
+}
+
+#time-change-txt{
+    text-align:center;
+    color:white;
+}
+
+#input-container{
+    grid-area:inputs;
+}
+
+#input-container div{
+    margin: 5px;
+    text-align: center;
+    color:white;
+}
+

@@ -1,0 +1,70 @@
+:root{
+    --calc-width: 450px;
+}
+
+html{
+    font-family: Arial;
+}
+#calc-container{
+    padding:20px;
+    background-color: gray;
+    width:var(--calc-width);
+    height: 500px;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(5,1fr);
+    grid-template-columns: 
+    'input input input input'
+    'one two three plus'
+    'four five six minus'
+    'seven eight nine multiply'
+    'point zero clear equals';
+}
+
+#num-input{
+    grid-area:input;
+    height:100px;
+    width:var(--calc-width);
+}
+
+.btn{
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    border-radius:25px;
+    margin: 10px;
+    background-color: white;
+}
+
+#btn-1{grid-area:one}
+
+#btn-2{grid-area:two}
+
+#btn-3{grid-area:three}
+
+#btn-4{grid-area:four}
+
+#btn-5{grid-area:five}
+
+#btn-6{grid-area:six}
+
+#btn-7{grid-area:seven}
+
+#btn-8{grid-area:eight}
+
+#btn-9{grid-area:nine}
+
+#btn-0{grid-area:zero}
+
+#btn
+
+#btn
+
+#btn
+
+#btn
+
+#btn
+

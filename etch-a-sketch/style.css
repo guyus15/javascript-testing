@@ -1,0 +1,46 @@
+:root{
+    --rows: 16;
+    --columns: 16;
+    --color:blue;
+}
+
+body{
+    background:url("gallery.jpg");
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 600px 50px;
+    grid-template-areas:
+    '. sketch .'
+    '. inputs .';
+}
+
+.grid-container{
+    height: 500px;
+    width: 500px;
+    grid-area:sketch;
+    justify-self: center;
+    display:grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+    grid-gap:0;
+    background-color: white;
+    border-style:solid;
+    border-color:black;
+}
+
+.inputs{
+    grid-area:inputs;
+    justify-self: center;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+input[type="text"]{
+    margin: 5px 0px 5px 0px;
+    padding-left:5px;
+    width:125px;
+    border-radius: 10px;
+    border-style:solid;
+    border-color:lightgray;
+}
